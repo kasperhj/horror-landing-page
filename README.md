@@ -1,0 +1,1 @@
+I want you to create a website that initially looks like a generic marketings website. However, as you scroll down, the website gets more and more uncanny/weird. In the end it should get outright scary. Something straight out of a horror movie

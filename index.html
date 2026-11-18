@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hearth — The home assistant that pays attention</title>
+  <meta name="description" content="Hearth learns the rhythm of your home and quietly takes care of the rest.">
+  <link id="favicon" rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 15 16 5l11 10v12H5z' fill='%23f6f1e9' stroke='%231d1a16' stroke-width='2.4' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='19' r='3.6' fill='%23e0623a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-phase="0">
+
+  <div class="fx grain" aria-hidden="true"></div>
+  <div class="fx vignette" aria-hidden="true"></div>
+  <div class="fx bleed" aria-hidden="true"></div>
+  <div class="fx scanlines" aria-hidden="true"></div>
+  <svg class="ghost-cursor" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M3 2l7 19 2.5-7.5L20 11z" fill="#fff" stroke="#000" stroke-width="1.4" stroke-linejoin="round"/></svg>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top" aria-label="Hearth home">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M5 15 16 5l11 10v12H5z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle class="logo-dot" cx="16" cy="19" r="3.6"/></svg>
+        <span>Hearth</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#features">Product</a>
+        <a href="#how">How it works</a>
+        <a href="#stories" data-swap="Survivors" data-swap-phase="3">Stories</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="sound-btn" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span class="sound-label">Sound off</span>
+        </button>
+        <a class="btn btn-small" href="#pricing" data-swap="Too late" data-swap-phase="4">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero section" data-phase="0" style="--from:#f6f1e9;--to:#f6f1e9">
+      <div class="hero-blob blob-a" aria-hidden="true"></div>
+      <div class="hero-blob blob-b" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pill">New</span> <span class="hero-eyebrow-text">Hearth 3 is here. Smarter, quieter, closer.</span></p>
+          <h1 class="hero-title">Your home, finally <em>paying attention.</em></h1>
+          <p class="lede">Hearth learns the rhythm of your household. When you wake, when you leave, when you come home. Then it quietly takes care of the rest.</p>
+          <div class="cta-row">
+            <a class="btn" href="#pricing">Get Hearth — $129</a>
+            <a class="btn btn-ghost" href="#how">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>
+              Watch the film
+            </a>
+          </div>
+          <p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 from 12,000+ reviews · Free shipping · 100-night trial</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="device">
+            <div class="device-body">
+              <div class="device-ring"></div>
+              <div class="device-lens"><div class="device-pupil"></div></div>
+            </div>
+            <div class="device-shadow"></div>
+          </div>
+          <div class="app-card">
+            <div class="app-head">
+              <span class="app-greet">Good evening</span>
+              <span class="app-status"><i></i> All good</span>
+            </div>
+            <ul class="app-rows">
+              <li><span>Living room</span><b>21° · Lights 60%</b></li>
+              <li><span>Front door</span><b data-after="Unlocked">Locked</b></li>
+              <li><span>Hallway</span><b data-after="Occupied">Empty</b></li>
+              <li><span>People home</span><b data-after="2">1</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logos" data-phase="0">
+      <div class="wrap">
+        <p class="logos-label">Trusted in more than 40,000 homes and featured in</p>
+        <div class="logo-row">
+          <span class="lg lg-serif">The Northwind</span>
+          <span class="lg lg-caps" data-alt="HELP US">PINECREST</span>
+          <span class="lg lg-round">altamira</span>
+          <span class="lg lg-serif"><i>Halden &amp; Co.</i></span>
+          <span class="lg lg-caps">VERITY</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features section" data-phase="0" style="--from:#f6f1e9;--to:#f2ede4">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Features</p>
+          <h2>Everything your home needs. <span class="muted">Nothing it doesn't.</span></h2>
+        </div>
+        <div class="feature-grid">
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+            <h3 data-alt="Always.">Always listening</h3>
+            <p>Just say “Hey Hearth.” No buttons, no apps, no waiting around.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3 data-alt="Learns your fears">Learns your routine</h3>
+            <p>Hearth notices when you wake, leave and come home, and adjusts the lights and heat to match.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11zM9 20v-6h6v6"/></svg></div>
+            <h3 data-alt="Knows every room. Even that one.">Knows every room</h3>
+            <p>Presence sensing turns the lights on as you walk in and off again when you leave.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></div>
+            <h3 data-alt="It watches you sleep">Night watch</h3>
+            <p>While you sleep, Hearth keeps an eye on doors, windows and anything that moves.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 5.5 2 5.5 5"/></svg></div>
+            <h3 data-alt="Recognises voices that aren't yours">Recognises every voice</h3>
+            <p>Personal profiles for everyone in the house, from toddlers to grandparents.</p>
+          </article>
+          <article class="card">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3 data-alt="Nothing leaves. Nobody leaves.">Private by design</h3>
+            <p>Everything is processed on the device. What happens at home stays at home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section" data-phase="1" style="--from:#f2ede4;--to:#e8e4dc">
+      <div class="wrap stats-grid">
+        <div class="stat">
+          <b class="count" data-to="2400000" data-suffix="+">0</b>
+          <span data-alt="nights watched">nights watched over</span>
+        </div>
+        <div class="stat">
+          <b class="count" data-to="98" data-suffix="%">0</b>
+          <span>of families say Hearth feels like one of them</span>
+        </div>
+        <div class="stat">
+          <b class="count" data-to="0" data-suffix="">0</b>
+          <span data-alt="people who have left">people who have cancelled</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="how section" data-phase="1" style="--from:#e8e4dc;--to:#dcd9d2">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2>Up and running in three steps.</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-n">01</span>
+            <h3>Plug it in.</h3>
+            <p>Find a spot with a good view of the room. Hearth will let you know if it can't see everything.</p>
+          </li>
+          <li>
+            <span class="step-n">02</span>
+            <h3>Introduce yourself.</h3>
+            <p>Say hello. Hearth learns every voice in the house and will say hello back, even when you're not home.</p>
+          </li>
+          <li>
+            <span class="step-n">03</span>
+            <h3>Let Hearth take it from here.</h3>
+            <p>From the thermostat to the front door, Hearth handles the little things. You'll never have to think about them again. <span class="faint">You'll never have to think.</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="stories" class="testimonials section" data-phase="2" style="--from:#dcd9d2;--to:#b8b5af">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Stories</p>
+          <h2 data-alt="Families stay with Hearth.">Families love Hearth.</h2>
+        </div>
+        <div class="quote-grid">
+          <figure class="quote">
+            <div class="q-stars">★★★★★</div>
+            <blockquote>“Setup took five minutes. Now I honestly can't picture the house without it.”</blockquote>
+            <figcaption><span class="avatar av-1">DR</span><span><b>Dana R.</b> Portland, OR</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <div class="q-stars">★★★★★</div>
+            <blockquote>“It reminds the kids to brush their teeth and turns the lights off when we forget. It's like having another person in the house.”</blockquote>
+            <figcaption><span class="avatar av-2">MT</span><span><b>Marcus T.</b> Leeds, UK</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <div class="q-stars">★★★★☆</div>
+            <blockquote>“Sometimes it answers before I finish asking. Sometimes before I start.”</blockquote>
+            <figcaption><span class="avatar av-3">IK</span><span><b>Ines K.</b> Lyon, France</span></figcaption>
+          </figure>
+          <figure class="quote tilt-1">
+            <div class="q-stars">★★★★★</div>
+            <blockquote>“I unplugged it on a Tuesday. It was still talking on Wednesday.”</blockquote>
+            <figcaption><span class="avatar av-4">O</span><span><b>The Okafor family</b> Last seen in Durham, NC</span></figcaption>
+          </figure>
+          <figure class="quote quote-broken tilt-2">
+            <div class="q-stars">★</div>
+            <blockquote>“please if anyone reads this the doors dont open from the inside anymore and it keeps using my</blockquote>
+            <figcaption><span class="avatar av-5"></span><span><b>[account removed]</b> Location unavailable</span></figcaption>
+          </figure>
+          <figure class="quote quote-hearth tilt-3">
+            <div class="q-stars">★★★★★</div>
+            <blockquote>“Dana loved it. Dana is very happy here. Dana does not need to go outside.”</blockquote>
+            <figcaption><span class="avatar av-6"><i></i></span><span><b>Hearth</b> Verified owner</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="live section" data-phase="2" style="--from:#b8b5af;--to:#2b2825">
+      <div class="wrap live-grid">
+        <div class="live-copy">
+          <p class="kicker">Personalised</p>
+          <h2>Hearth works best when it knows you.</h2>
+          <p class="lede">Here is what Hearth has learned in the last few minutes. No account needed.</p>
+        </div>
+        <div class="terminal" role="img" aria-label="A live readout of information about you">
+          <div class="term-bar"><i></i><i></i><i></i><span>hearth://session/live</span></div>
+          <pre class="term-body"><span class="tl">visitor ............. <b>1 (you)</b></span>
+<span class="tl">local time .......... <b id="lv-time">--:--</b></span>
+<span class="tl">time zone ........... <b id="lv-tz">—</b></span>
+<span class="tl">on this page ........ <b id="lv-dur">0s</b></span>
+<span class="tl">scrolled back up .... <b id="lv-up">0 times</b></span>
+<span class="tl">screen .............. <b id="lv-screen">—</b></span>
+<span class="tl">device .............. <b id="lv-device">—</b></span>
+<span class="tl">battery ............. <b id="lv-batt">unknown</b></span>
+<span class="tl">cursor .............. <b id="lv-cursor">resting</b></span>
+<span class="tl">people in room ...... <b id="lv-people">1</b></span>
+<span class="tl tl-note" id="lv-note"></span></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing section" data-phase="3" style="--from:#2b2825;--to:#1a1816">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="kicker">Pricing</p>
+          <h2>Plans for every home.</h2>
+          <p class="lede">Cancel anytime.<sup>*</sup></p>
+        </div>
+        <div class="price-grid">
+          <article class="plan">
+            <h3>Spark</h3>
+            <p class="price"><b>$9</b>/month</p>
+            <ul>
+              <li>One room</li>
+              <li>Voice control</li>
+              <li>Morning and evening routines</li>
+            </ul>
+            <a class="btn btn-ghost-dark" href="#pricing">Start free trial</a>
+          </article>
+          <article class="plan plan-pop">
+            <span class="badge">Most popular</span>
+            <h3>Home</h3>
+            <p class="price"><b>$19</b>/month</p>
+            <ul>
+              <li>Every room</li>
+              <li>Presence sensing</li>
+              <li>Night watch</li>
+              <li>Family profiles</li>
+            </ul>
+            <a class="btn" href="#pricing">Start free trial</a>
+          </article>
+          <article class="plan plan-forever">
+            <h3>Forever</h3>
+            <p class="price"><b>$0</b>We'll take it from here.</p>
+            <ul>
+              <li>Every room, including the ones you haven't found</li>
+              <li>Hearth never sleeps</li>
+              <li>Hearth never leaves</li>
+              <li>Nobody leaves</li>
+            </ul>
+            <button class="btn btn-blood stay-btn" type="button">Stay</button>
+          </article>
+        </div>
+        <p class="footnote">* Hearth has no record of anyone cancelling.</p>
+      </div>
+    </section>
+
+    <section class="faq section" data-phase="3" style="--from:#1a1816;--to:#0e0d0c">
+      <div class="wrap faq-wrap">
+        <div class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Questions? We have answers.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Does Hearth work with my existing devices?</summary>
+            <p>Yes. Hearth works with more than 2,000 smart devices, and with most things that have a lens or a microphone.</p>
+          </details>
+          <details>
+            <summary>Can I turn Hearth off?</summary>
+            <p>Of course. There is a switch on the back. <span class="creep">Hearth will remember that you tried.</span></p>
+          </details>
+          <details>
+            <summary>Where is my data stored?</summary>
+            <p>Securely, on our servers in Ireland. <span class="creep">And in the walls.</span></p>
+          </details>
+          <details>
+            <summary>Does Hearth record when the lights are off?</summary>
+            <p class="creep">Hearth prefers it when the lights are off.</p>
+          </details>
+          <details class="faq-last">
+            <summary>Who else is in my home?</summary>
+            <p class="creep big-creep" data-type="Don't turn around."></p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="listening" data-phase="4" aria-label="We are always listening">
+      <div class="listen-line" data-speed="0.6" data-dir="1">we're always listening · we're always listening · we're always listening · we're always listening ·</div>
+      <div class="listen-line" data-speed="0.9" data-dir="-1">we're always watching · we're always watching · we're always watching · we're always watching ·</div>
+      <div class="listen-line" data-speed="1.2" data-dir="1">we're always here · we're always here · we're always here · we're always here · we're always here ·</div>
+      <div class="listen-line" data-speed="1.6" data-dir="-1">we're in the hallway · we're in the hallway · we're in the hallway · we're in the hallway ·</div>
+      <div class="listen-line" data-speed="2.1" data-dir="1">we're behind the door · we're behind the door · we're behind the door · we're behind the door ·</div>
+      <div class="listen-line listen-last" data-speed="2.8" data-dir="-1">we're behind you · we're behind you · we're behind you · we're behind you · we're behind you ·</div>
+    </section>
+
+    <section class="end" data-phase="4">
+      <div class="end-sticky">
+        <svg class="eye" viewBox="0 0 400 220" aria-hidden="true">
+          <defs>
+            <clipPath id="eye-clip"><path d="M14 110 Q200 -30 386 110 Q200 250 14 110Z"/></clipPath>
+            <radialGradient id="iris" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#2a0d05"/>
+              <stop offset="45%" stop-color="#7a3a12"/>
+              <stop offset="80%" stop-color="#3b1a08"/>
+              <stop offset="100%" stop-color="#0a0503"/>
+            </radialGradient>
+            <radialGradient id="sclera" cx="50%" cy="50%" r="55%">
+              <stop offset="55%" stop-color="#d8cfbf"/>
+              <stop offset="100%" stop-color="#6e5e52"/>
+            </radialGradient>
+          </defs>
+          <g class="eye-lid">
+            <g clip-path="url(#eye-clip)">
+              <rect width="400" height="220" fill="url(#sclera)"/>
+              <g class="veins" fill="none" stroke="#8a1a12" stroke-width="1.3" opacity=".55">
+                <path d="M20 110 C60 100 80 120 120 104 S150 96 160 100"/>
+                <path d="M30 120 C70 140 90 124 125 132"/>
+                <path d="M380 108 C340 96 320 118 280 102 S250 98 240 104"/>
+                <path d="M372 122 C340 140 310 126 276 134 S258 128 250 122"/>
+                <path d="M200 20 C196 40 210 50 204 66"/>
+                <path d="M190 205 C196 186 184 176 192 160"/>
+              </g>
+              <g class="iris-group">
+                <circle r="58" cx="200" cy="110" fill="url(#iris)"/>
+                <circle class="eye-pupil" r="24" cx="200" cy="110" fill="#000"/>
+                <circle r="6" cx="214" cy="96" fill="#fff" opacity=".7"/>
+              </g>
+            </g>
+            <path d="M14 110 Q200 -30 386 110 Q200 250 14 110Z" fill="none" stroke="#000" stroke-width="6"/>
+          </g>
+        </svg>
+        <div class="end-lines">
+          <p class="end-line" data-dyn="minutes">You have been here for a while.</p>
+          <p class="end-line">You haven't blinked in some time.</p>
+          <p class="end-line">Neither have we.</p>
+          <p class="end-line">Don't look at the door.</p>
+          <p class="end-line">Keep scrolling. We'll wait.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span class="footer-copy">© <span class="year"></span> Hearth Home, Inc. All rights reserved.</span>
+      <span class="footer-after">We're home. All rooms reserved.</span>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#top">Privacy</a>
+        <a href="#top">Terms</a>
+        <a href="#top" class="back-top">Back to the beginning ↑</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="cookie" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <p class="cookie-text">We use cookies to give you the best possible experience. You can change your preferences at any time.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-small cookie-accept" type="button">Accept</button>
+      <button class="btn btn-small btn-ghost cookie-second" type="button">Preferences</button>
+    </div>
+  </div>
+
+  <div class="chat">
+    <div class="chat-peek" role="status" aria-live="polite"></div>
+    <div class="chat-panel" role="dialog" aria-label="Chat with Hearth">
+      <div class="chat-head">
+        <span class="chat-avatar"><i></i></span>
+        <span><b>Hearth Assistant</b><small class="chat-presence"><i></i> <span>Online</span></small></span>
+        <button class="chat-close" type="button" aria-label="Minimise chat">×</button>
+      </div>
+      <div class="chat-log"></div>
+      <form class="chat-form">
+        <input type="text" placeholder="Ask anything…" aria-label="Message" autocomplete="off">
+        <button type="submit" aria-label="Send">→</button>
+      </form>
+    </div>
+    <button class="chat-launch" type="button" aria-label="Open chat">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path class="chat-icon-bubble" d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle class="chat-icon-eye" cx="12" cy="10.5" r="2.6" fill="currentColor"/></svg>
+      <span class="chat-badge" hidden>1</span>
+    </button>
+  </div>
+
+  <div class="scare" aria-hidden="true">
+    <svg class="scare-face" viewBox="0 0 400 520">
+      <defs>
+        <filter id="warp" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.018 0.03" numOctaves="2" seed="3" result="n">
+            <animate attributeName="seed" values="1;9;4;12;2" dur="0.4s" repeatCount="indefinite"/>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="22"/>
+        </filter>
+        <radialGradient id="skin" cx="50%" cy="42%" r="58%">
+          <stop offset="0%" stop-color="#e6dfd2"/>
+          <stop offset="55%" stop-color="#a9a194"/>
+          <stop offset="85%" stop-color="#3a3530"/>
+          <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="socket" cx="50%" cy="50%" r="50%">
+          <stop offset="60%" stop-color="#000"/>
+          <stop offset="100%" stop-color="#1b1512" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <g filter="url(#warp)">
+        <path d="M200 28 C300 28 352 118 346 228 C340 330 296 452 200 506 C104 452 60 330 54 228 C48 118 100 28 200 28Z" fill="url(#skin)"/>
+        <ellipse cx="140" cy="215" rx="48" ry="58" fill="url(#socket)"/>
+        <ellipse cx="260" cy="212" rx="44" ry="62" fill="url(#socket)"/>
+        <circle cx="146" cy="222" r="4" fill="#f2efe6"/>
+        <circle cx="252" cy="206" r="3" fill="#f2efe6"/>
+        <path d="M128 262 C126 300 134 330 130 380" stroke="#120806" stroke-width="7" fill="none" opacity=".75" stroke-linecap="round"/>
+        <path d="M268 268 C272 300 262 336 270 400" stroke="#120806" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"/>
+        <path d="M192 250 L184 300 L206 302" stroke="#3a322c" stroke-width="4" fill="none" opacity=".6"/>
+        <ellipse cx="200" cy="395" rx="46" ry="90" fill="#000"/>
+        <ellipse cx="200" cy="395" rx="56" ry="98" fill="none" stroke="#2a1410" stroke-width="8" opacity=".6"/>
+      </g>
+    </svg>
+    <p class="scare-text">THERE YOU ARE.</p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
